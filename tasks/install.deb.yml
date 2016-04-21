@@ -13,10 +13,10 @@
 
 - name: Install requirements - pt. 2
   pip: name={{item}}
-  with_items: [six, wal-e]
+  with_items: [six, wal-e, requests]
   when: not wale_latest
 
 - name: Install requirements - pt. 2
   pip: name={{item}} state=latest
-  with_items: [six, wal-e]
+  with_items: [six, wal-e, requests]
   when: wale_latest
